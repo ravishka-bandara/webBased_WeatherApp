@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWIse - Personal Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <!-- these are icons and fonts librargy so when using this we dont have to download it so fast loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="container">
+        <!--header-->
+        <header>
+            <h1><i class="fas fa-cloud-sun"></i>Weatherwise</h1>
+            <p class="subtitle">Real-time Weather at your screen</p>
+        </header>
+
+
+        <!--search section-->
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text"
+                    id="city-input"
+                    placeholder="Enter city name (e.g-,London, Tokyo)"
+                    autocomplete="off">
+                <button id="search-btn">
+                    <i class="fas fa-search"></i>Search
+                </button>
+            </div>
+            <button id="location-btn" class="location-btn">
+                <i class="fas fa-location-arrow"></i>Use my location
+            </button>
+        </div>
+
+
+        <!--weather display-->
+        <div class="weather-card">
+            <div class="weather-header">
+                <h2 id="city-name">Search for a city</h2>
+                <div class="date" id="current-date">--</div>
+            </div>
+
+            <div class="weather-main">
+                <div class="temp-section">
+                    <div class="temp" id="temperature">--°C</div>
+                    <div class="unit-toggle">
+                        <button class="unit-btn active" data-unit="celcius">°C</button>
+                        <button class="unit-btn" data-unit="fahrenheit">°F</button>
+                    </div>
+                </div>
+
+            <div class="weather-icon" id="weather-icon">
+                <i class="fas fa-question"></i>
+            </div>
+
+            <div class="description" id="weather-description">Enter a city name to see weather there</div>
+            </div>
+
+
+        <!--weather details-->
+
+        <div class="weather-details">
+            <div class="detail-item">
+                <div class="detail-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <div class="detail-info">
+                    <div class="detail-label">Humidity</div>
+                    <div class="detail-value" id="Humidity">--%</div>
+                </div>
+            </div>
+
+            <div class="detail-item">
+                <div class="detail-icon">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <div class="detail-info">
+                    <div class="detail-label">Wind speed</div>
+                    <div class="detail-value" id="wind-speed">-- km/h</div>
+                </div>
+            </div>
+
+
+            <div class="detail-item">
+                <div class="detail-icon">
+                    <i class="fas fa-temperature-low"></i>
+                </div>
+                <div class="detail-info">
+                    <div class="detail-label">Feels like</div>
+                    <div class="detail-value" id="feels-like">-- °C</div>
+                </div>
+            </div>
+
+            <div class="detail-item">
+                <div class="detail-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="detail-info">
+                    <div class="detail-label">Sunrise/Sunset</div>
+                    <div class="detail-value" id="sun-times">-- / --</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--Error massage-->
+
+        <div class="error-message" id="error-message" style="display: none;">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span id="error-text">City not found. please try again.</span>
+        </div>
+
+        <!--loading spinnerr-->
+
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+        </div>
+
+
+        <!--footer-->
+
+        <footer>
+            <p>Built with <i class="fas fa-heart"></i> by <span id="your-name">Ravishka Bandara</span></p>
+            <p class="api-credit">Powered by OpenWeatherMap API</p>
+        </footer>
+
+    </div>
+
+<script src="script.js"></script>
+    
+</body>
+</html>
