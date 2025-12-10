@@ -7,8 +7,8 @@ simple web based weather app using api keys
 ## **WeatherWise Project Roadmap**
 
 ### **✅ Completed Features**
-[ ] Project repository setup with Git & GitHub  
-[ ] Basic HTML structure with all sections  
+[X] Project repository setup with Git & GitHub  
+[X] Basic HTML structure with all sections  
 [ ] CSS styling with weather-appropriate color schemes  
 [ ] Search functionality for cities  
 [ ] Display current weather data (temp, humidity, wind)  
