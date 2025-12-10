@@ -13,7 +13,7 @@ simple web based weather app using api keys
 [ ] Search functionality for cities  
 [ ] Display current weather data (temp, humidity, wind)  
 [ ] Weather icons based on conditions  
-[ ] Responsive design for mobile  
+[X] Responsive design for mobile  
 [ ] "Use My Location" button  
 [ ] Temperature unit toggle (°C/°F)  
 [ ] Loading spinner during API calls  
