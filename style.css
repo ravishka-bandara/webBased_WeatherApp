@@ -282,3 +282,26 @@ h1 i{
     to {transform: translateY(0); opacity: 1;}
 }
 
+/* footer*/
+
+footer{
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer i.fa-heart{
+    color: #e74c3c;
+}
+
+.api-credit{
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+
+
+/*======== mobile responsive making (for smaller screens)=====*/
+
