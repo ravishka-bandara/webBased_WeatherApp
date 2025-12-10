@@ -305,3 +305,34 @@ footer i.fa-heart{
 
 /*======== mobile responsive making (for smaller screens)=====*/
 
+@media (max-width: 768px){
+
+    .container{
+        padding: 20px;
+    }
+
+    .weather-main{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .temp{
+        font-size: 3rem;
+    }
+
+    .weather-icon{
+        font-size: 4rem;
+    }
+
+    .search-box{
+        flex-direction: column;
+    }
+
+    #city-input, #search-btn, .location-btn{
+        width: 100%;
+    }
+}
+
+
+
