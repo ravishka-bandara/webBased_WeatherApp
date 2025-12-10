@@ -194,3 +194,50 @@ h1 i{
     text-align: center;
     margin-top: 10px;
 }
+
+/*weather details*/
+
+.weather-details{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.detail-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #f8f8f8;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.detail-item:hover{
+    transform: translateY(-3px);
+}
+
+.detail-icon{
+    font-size: 1.5rem;
+    color: #667eea;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-label{
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.detail-value{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+}
+
