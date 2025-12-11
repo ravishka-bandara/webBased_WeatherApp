@@ -29,3 +29,16 @@ let currentUnit = 'celcius';
 let currentDate = null;
 
 //weather icons mapping
+
+const weatherIcons ={
+    '01':'fas fa-sun',  //sky clear
+    '02':'fas fa-cloud-sun', //clouds
+    '03':'fas fa-cloud', //brocken clouds
+    '04':'fas fa-cloud', //broke clouds
+    '09':'fas fa-cloud-rain', //shower rain
+    '10':'fas fa-cloud-sun-rain', //rain
+    '11':'fas fa-bolt', //thunderstrom
+    '13':'far fa-snowflake', //snow
+    '50':'fas fa-smog' //mistt
+};
+
