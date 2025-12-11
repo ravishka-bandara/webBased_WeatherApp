@@ -25,3 +25,7 @@ const unitButtons = document.querySelectorAll('.unit-btn');
 
 //global varieables
 
+let currentUnit = 'celcius';
+let currentDate = null;
+
+//weather icons mapping
