@@ -164,3 +164,27 @@ function getWeatherByLocation(){
     );
 }
 
+//display weather data
+
+function displayWeather(data){
+    const {name, sys, weather, wind} = data;
+
+    //city country
+    cityName.textContent = `${name},${sys.country}`;
+
+    //temperature
+    const tempCelcius - Math.round(main.temp);
+    const tempFahrenheit = Math.round((tempCelcius * 9/5)+32);
+    const feelsLikeC = Math.round(main.feels_like);
+    const feelsLikeF = Math.round((feelsLikeC * 9/5)+32);
+
+    temperature.textContent = `${tempCelcius}°C`;
+    feelsLike.textContent = `${feelsLikeC}°C`;
+
+
+    //weather icon and description
+
+    
+
+
+}
