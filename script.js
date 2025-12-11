@@ -71,3 +71,18 @@ function updateDate(){
 
 // setup event listners
 
+function setupEventListners(){
+    searchBtn.addEventListener('click',handleSearch);
+    cityInput.addEventListener('keypress',(e) =>{
+        if (e.key === 'Enter') handleSearch();
+    });
+
+    locationBtn.addEventListener('click',getWeatherByLocation);
+
+    unitButtons.forEach(button =>{
+        button.addEventListener('click',() =>{
+            changeTemperatureUnit(button.dataset.unit);
+        });
+    });
+}
+
