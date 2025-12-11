@@ -270,3 +270,5 @@ function hideError(){
 }
 
 //name in footer
+
+document.getElementById('Ravishka-bandara').textContent = 'Ravishka-bandara';
