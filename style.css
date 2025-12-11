@@ -18,7 +18,7 @@ body{
 .container{
     max-width: 800px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(240, 232, 232, 0.979);
     border-radius: 24px;
     padding: 30px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -112,7 +112,7 @@ h1 i{
 /* weather card*/
 
 .weather-card{
-    background: white;
+    background: rgba(243, 200, 200, 0.719);
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
