@@ -235,3 +235,38 @@ function changeTemperatureUnit(unit){
     }
 }
 
+// update background based on weather
+
+function updateBackground(weatherCondition){
+    const body = document.body;
+    body.className = ''; //remove all classes
+    body.classList.add(weatherCondition);
+}
+
+//show loading spinner animation
+
+function showLoading(){
+    loading.style.display = 'block';
+}
+
+//hide loading spinner
+
+function hideLoading(){
+    loading.style.display = 'none';
+}
+
+//show error message
+
+function showError(message){
+    errorText.textContent = message;
+    errorMessage.style.display = 'flex';
+    setTimeout(hideError, 5000);
+}
+
+//hide error message
+
+function hideError(){
+    errorMessage.style.display = 'none';
+}
+
+//name in footer
