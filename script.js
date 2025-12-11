@@ -201,7 +201,13 @@ function displayWeather(data){
     const sunset = new Date(sys.sunset * 1000).toLocaleTimeString([], {hour: `2-digit`,minute: `2-digit`});
     sunTimes.textContent = `${sunrise} / ${sunset}`;
 
-    
 
+    //store converted values
+
+    currentData.tempCelcius = tempCelcius;
+    currentData.tempFahrenheit = tempFahrenheit;
+    currentData.feelsLikeC = feelsLikeC;
+    currentData.feelsLikeF = feelsLikeF;
 
 }
+
