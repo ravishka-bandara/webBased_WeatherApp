@@ -98,3 +98,30 @@ async function handleSearch(){
     await getweather(city);
 }
 
+// get weather by city names
+
+async function getweather(city){
+    try{
+        showLoading();
+        hideError();
+
+        const response = await fetch(
+            `${BASE_URL}?q=${city}&appid=${API_KEY}&units=metric`
+        );
+
+        if (!response.ok){
+            throw new Error('city not found');
+        }
+
+        const data = await response.json();
+        currentData = data;
+        displayWeather(data);
+        updateBackground(data.weather[0].main.toLowerCase());
+
+    } catch (error){
+        showError(error.message);
+    } finally  {
+        hideLoading();
+    }
+}
+
