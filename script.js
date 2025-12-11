@@ -211,3 +211,27 @@ function displayWeather(data){
 
 }
 
+// change temperature unit
+
+function changeTemperatureUnit(unit){
+    if (unit === currentUnit || !currentData) return;
+
+    currentUnit = unit;
+
+    //update active button
+
+    unitButtons.forEach(button =>{
+        button.classList.toggle('active',button.dataset.unit === unit);
+    });
+
+    //update tmperature
+
+    if(unit === 'celcius'){
+        temperature.textContent = `${currentData.tempCelcius}°C`;
+        feelsLike.textContent = `${currentData.feelsLikeC}°C`;
+    } else{
+        temperature.textContent = `${currentData.tempFahrenheit}°F`;
+        feelsLike.textContent = `${currentData.feelsLikeF}°F`;
+    }
+}
+
