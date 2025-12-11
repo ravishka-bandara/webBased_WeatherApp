@@ -125,3 +125,42 @@ async function getweather(city){
     }
 }
 
+//get weather by users location 
+
+function getWeatherByLocation(){
+    if (!navigator.geolocation){
+        showError('geolocation is not support by your browser');
+        return;
+    }
+
+    showLoading();
+    hideError();
+
+    navigator.geolocation.getCurrentPosition(
+        async (position) =>{
+            try{
+                const {latitude, longitude} = position.coords;
+                const response = await fetch(
+                    `${BASE_URL}?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`
+                );
+
+                if (!response.ok) throw new Error('location not found');
+
+                const data = await response.json();
+                currentData = data;
+                displayWeather(data);
+                updateBackground(data.weather[0].main.toLowerCase());
+                cityInput.value = data.name;
+            }catch (error){
+                showError('unable to get weather for your geo location');
+            } finally{
+                hideLoading();
+            }
+        },
+        (error) =>{
+            hideLoading();
+            showError('please enable locaion access');
+        }
+    );
+}
+
