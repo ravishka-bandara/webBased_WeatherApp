@@ -26,7 +26,7 @@ const unitButtons = document.querySelectorAll('.unit-btn');
 //global varieables
 
 let currentUnit = 'celcius';
-let currentDate = null;
+let currentData = null;
 
 //weather icons mapping
 
@@ -68,4 +68,6 @@ function updateDate(){
     };
     currentDate.textContent = now.toLocaleDateString('en-US',options);
 }
+
+// setup event listners
 
