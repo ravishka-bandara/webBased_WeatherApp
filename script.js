@@ -184,7 +184,24 @@ function displayWeather(data){
 
     //weather icon and description
 
+    const weatherCode = weather[0].icon.substring(0, 2);
+    weatherIcon.innerHTML = `<i class="${weatherIcons[weatherCode] || 'fas fa-cloud'}"></i>`;
+    weatherDescription.textContent = weather[0].description;
 
+    //other details
+
+    humidity.textContent = `${main.humidity}%`;
+    windSpeed.textContent = `${Math.round(wind.speed *3.6)} km/h`; // convert m/s to km/h
+
+    //sunrise and sunset
+
+    const sunrise = new Date(sys.sunrise * 1000).toLocaleTimeString([], {hour: '2-digit',minute:
+        `2-digit`
+    });
+    const sunset = new Date(sys.sunset * 1000).toLocaleTimeString([], {hour: `2-digit`,minute: `2-digit`});
+    sunTimes.textContent = `${sunrise} / ${sunset}`;
+
+    
 
 
 }
