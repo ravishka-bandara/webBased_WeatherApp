@@ -173,7 +173,7 @@ function displayWeather(data){
     cityName.textContent = `${name},${sys.country}`;
 
     //temperature
-    const tempCelcius - Math.round(main.temp);
+    const tempCelcius = Math.round(main.temp);
     const tempFahrenheit = Math.round((tempCelcius * 9/5)+32);
     const feelsLikeC = Math.round(main.feels_like);
     const feelsLikeF = Math.round((feelsLikeC * 9/5)+32);
@@ -184,7 +184,7 @@ function displayWeather(data){
 
     //weather icon and description
 
-    
+
 
 
 }
