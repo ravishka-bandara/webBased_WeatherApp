@@ -42,3 +42,11 @@ const weatherIcons ={
     '50':'fas fa-smog' //mistt
 };
 
+// iniializee
+
+document.addEventListener('DOMContentLoaded',() =>{
+    updateDate();
+    setDefaultCity();
+    setupEventListners();
+});
+
