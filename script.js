@@ -86,3 +86,15 @@ function setupEventListners(){
     });
 }
 
+// handle search
+
+async function handleSearch(){
+    const city = cityInput.ariaValueMax.trim();
+    if (!city){
+        showError('please enter a city name');
+        return;
+    }
+
+    await getweather(city);
+}
+
