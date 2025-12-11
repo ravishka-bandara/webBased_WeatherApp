@@ -12,7 +12,7 @@ const cityName = document.getElementById('city-name');
 const temperature = document.getElementById('temperature');
 const weatherIcon = document.getElementById('weather-icon');
 const weatherDescription = document.getElementById('weather-description');
-const humidity = document.getElementById('humidity');
+const humidity = document.getElementById('Humidity');
 const windSpeed = document.getElementById('wind-speed');
 const feelsLike = document.getElementById('feels-like');
 const sunTimes = document.getElementById('sun-times');
@@ -25,7 +25,7 @@ const unitButtons = document.querySelectorAll('.unit-btn');
 
 //global varieables
 
-let currentUnit = 'celcius';
+let currentUnit = 'celsius';
 let currentData = null;
 
 //weather icons mapping
@@ -89,7 +89,7 @@ function setupEventListners(){
 // handle search
 
 async function handleSearch(){
-    const city = cityInput.ariaValueMax.trim();
+    const city = cityInput.value.trim();
     if (!city){
         showError('please enter a city name');
         return;
@@ -226,7 +226,7 @@ function changeTemperatureUnit(unit){
 
     //update tmperature
 
-    if(unit === 'celcius'){
+    if(unit === 'celsius'){
         temperature.textContent = `${currentData.tempCelcius}°C`;
         feelsLike.textContent = `${currentData.feelsLikeC}°C`;
     } else{
