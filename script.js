@@ -56,3 +56,16 @@ async function setDefaultCity(){
     await getweather('Anuradhapura');
 }
 
+//update current date
+
+function updateDate(){
+    const now = new Date();
+    const options = {
+        weekday: 'long',
+        year:'numeric',
+        month:'long',
+        day:'numeric'
+    };
+    currentDate.textContent = now.toLocaleDateString('en-US',options);
+}
+
