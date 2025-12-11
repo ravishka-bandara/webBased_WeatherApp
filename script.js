@@ -167,7 +167,7 @@ function getWeatherByLocation(){
 //display weather data
 
 function displayWeather(data){
-    const {name, sys, weather, wind} = data;
+    const {name, sys, main, weather, wind} = data;
 
     //city country
     cityName.textContent = `${name},${sys.country}`;
