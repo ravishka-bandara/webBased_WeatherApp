@@ -50,3 +50,9 @@ document.addEventListener('DOMContentLoaded',() =>{
     setupEventListners();
 });
 
+//default city on loading
+
+async function setDefaultCity(){
+    await getweather('Anuradhapura');
+}
+
